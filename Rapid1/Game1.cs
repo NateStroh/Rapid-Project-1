@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Rapid1.Sprites;
+using System.Collections.Generic;
 
 namespace Rapid1
 {
@@ -8,6 +10,8 @@ namespace Rapid1
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        private List<Sprite> sprites;
 
         public Game1()
         {
@@ -18,8 +22,6 @@ namespace Rapid1
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
@@ -27,7 +29,20 @@ namespace Rapid1
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            sprites = new List<Sprite>() {
+
+            // TODO: load in player, paddles(floor shit), enemies
+                new Player(Content.Load<Texture2D>("testPlayer")) {
+                    Position = new Vector2(100, 100),
+                    Speed = 10
+                },
+
+                new Paddle(Content.Load<Texture2D>("platform")) {
+                    Position = new Vector2(200, 200),
+                },
+            };
+
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -35,7 +50,9 @@ namespace Rapid1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            foreach (var sprite in sprites) {
+                sprite.Update(gameTime, sprites);
+            }
 
             base.Update(gameTime);
         }
@@ -44,7 +61,12 @@ namespace Rapid1
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+
+            foreach (var sprite in sprites){
+                sprite.Draw(_spriteBatch);
+            }
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

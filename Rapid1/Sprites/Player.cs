@@ -51,6 +51,4 @@ namespace Rapid1.Sprites
                 Velocity.Y = Speed;
         }
     }
-
-    }
 }

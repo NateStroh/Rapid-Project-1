@@ -26,7 +26,7 @@ namespace Rapid1.Sprites
         }
 
         public virtual void Draw(SpriteBatch spriteBatch){
-            spriteBatch.Draw(texture, Position, Color.Blue);
+            spriteBatch.Draw(texture, Position, Color.White);
         }
 
         protected bool isColliding(Sprite sprite) {
