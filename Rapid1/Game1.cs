@@ -61,19 +61,19 @@ namespace Rapid1
                     Position = new Vector2(0,1000)
                 },
 
-                new Paddle(Content.Load<Texture2D>("Small"))
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Green1"))
                 {
                     Position = new Vector2(300,800),
                     paddleType = 1
                 },
 
-                new Paddle(Content.Load<Texture2D>("Small"))
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Yellow2"))
                 {
                     Position = new Vector2(900,800),
                     paddleType = 2
                 },
 
-                new Paddle(Content.Load<Texture2D>("Small"))
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Red2"))
                 {
                     Position = new Vector2(1600,1000),
                     paddleType = 3
