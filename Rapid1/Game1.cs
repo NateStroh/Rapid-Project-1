@@ -10,6 +10,8 @@ namespace Rapid1
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Camera _cam;
+        
 
         public static int screenWidth;
         public static int screenHeight;
@@ -43,6 +45,7 @@ namespace Rapid1
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            _cam = new Camera();
 
             sprites = new List<Sprite>() {
 
@@ -89,6 +92,10 @@ namespace Rapid1
 
             foreach (var sprite in sprites) {
                 sprite.Update(gameTime, sprites);
+                if(sprite.GetType() == typeof(Player))
+                {
+                    _cam.Follow(sprite.Position, sprite.texture);
+                }
             }
 
             base.Update(gameTime);
@@ -98,7 +105,7 @@ namespace Rapid1
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(transformMatrix: _cam.Transform);
 
             foreach (var sprite in sprites){
                 sprite.Draw(_spriteBatch);
