@@ -8,6 +8,10 @@ namespace Rapid1.Sprites
 {
     class Paddle : Sprite
     {
+        //1 for green
+        //2 for yellow
+        //3 for red
+        public int paddleType;
         public Paddle(Texture2D texture) : base(texture)
         {
 

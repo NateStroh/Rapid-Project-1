@@ -10,7 +10,8 @@ namespace Rapid1.Sprites
         public Texture2D texture;
         public Vector2 Position;
         public Vector2 Velocity;
-        public float Speed;
+        public float SpeedX;
+        public float SpeedY;
 
         //a collision box for each sprite
         public Rectangle SpriteBox {

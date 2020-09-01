@@ -11,6 +11,9 @@ namespace Rapid1
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        public static int screenWidth;
+        public static int screenHeight;
+
         private List<Sprite> sprites;
 
         public Game1()
@@ -22,6 +25,18 @@ namespace Rapid1
 
         protected override void Initialize()
         {
+
+
+            //Sets the size of the application window
+            screenWidth = 1920;
+            screenHeight = 1080;
+
+            _graphics.PreferredBackBufferWidth = screenWidth;
+            _graphics.PreferredBackBufferHeight = screenHeight;
+            _graphics.ToggleFullScreen();
+            _graphics.ApplyChanges();
+
+
             base.Initialize();
         }
 
@@ -32,13 +47,33 @@ namespace Rapid1
             sprites = new List<Sprite>() {
 
             // TODO: load in player, paddles(floor shit), enemies
-                new Player(Content.Load<Texture2D>("testPlayer")) {
-                    Position = new Vector2(100, 100),
-                    Speed = 10
+                new Player(Content.Load<Texture2D>("testPlayer"))
+                {
+                    Position = new Vector2(100, 100)
+
                 },
 
-                new Paddle(Content.Load<Texture2D>("platform")) {
-                    Position = new Vector2(200, 200),
+                new Sprite(Content.Load<Texture2D>("Block"))
+                {
+                    Position = new Vector2(0,1000)
+                },
+
+                new Paddle(Content.Load<Texture2D>("Small"))
+                {
+                    Position = new Vector2(300,800),
+                    paddleType = 1
+                },
+
+                new Paddle(Content.Load<Texture2D>("Small"))
+                {
+                    Position = new Vector2(900,800),
+                    paddleType = 2
+                },
+
+                new Paddle(Content.Load<Texture2D>("Small"))
+                {
+                    Position = new Vector2(1600,1000),
+                    paddleType = 3
                 },
             };
 
@@ -49,6 +84,8 @@ namespace Rapid1
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            
 
             foreach (var sprite in sprites) {
                 sprite.Update(gameTime, sprites);
