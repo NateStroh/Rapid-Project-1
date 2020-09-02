@@ -10,8 +10,10 @@ namespace Rapid1.Sprites
         public Texture2D texture;
         public Vector2 Position;
         public Vector2 Velocity;
+        public Color color;
         public float SpeedX;
         public float SpeedY;
+        public bool isActive;
 
         //a collision box for each sprite
         public Rectangle SpriteBox {
@@ -20,6 +22,8 @@ namespace Rapid1.Sprites
 
         public Sprite(Texture2D t) {
             texture = t;
+            color = Color.White;
+            isActive = true;
         }
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites){
@@ -27,7 +31,7 @@ namespace Rapid1.Sprites
         }
 
         public virtual void Draw(SpriteBatch spriteBatch){
-            spriteBatch.Draw(texture, Position, Color.White);
+            spriteBatch.Draw(texture, Position, color);
         }
 
         protected bool isColliding(Sprite sprite) {

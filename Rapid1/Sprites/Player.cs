@@ -10,9 +10,17 @@ namespace Rapid1.Sprites
     class Player : Sprite
     {
         private bool hasJumped;
+        private int health = 1;
+        private const int REDSPEED = 1100;
+        private const int YELLOWSPEED = 700;
+        private const int GREENSPEED = 500;
 
-        public Player(Texture2D texture) : base(texture){
-            
+        public Player(Texture2D texture) : base(texture) {
+
+        }
+
+        public int getHealth(){
+            return health;
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites) {
@@ -21,12 +29,29 @@ namespace Rapid1.Sprites
             //Gravity acting on the player
             SpeedY += 20;
 
+            //this is just test code to change player color instead of the different textures
+            if (SpeedY > REDSPEED)
+            {
+                color = Color.Red;
+            }
+            else if (SpeedY > YELLOWSPEED)
+            {
+                color = Color.Yellow;
+            }
+            else if (SpeedY > GREENSPEED)
+            {
+                color = Color.Green;
+            }
+            else {
+                color = Color.White;
+            }
+
             foreach (var sprite in sprites) 
             {
                 if (sprite != this) 
                 {
                     //this should stop the player if they hit a paddle
-                    if (sprite.GetType() == typeof(Paddle)) 
+                    if (sprite.GetType() == typeof(Paddle))
                     {
                         if (((Paddle)sprite).paddleType == 1)
                         {
@@ -49,6 +74,9 @@ namespace Rapid1.Sprites
                                 this.SpeedY = -SpeedY * 1.5f;
                             }
                         }
+                    }
+                    else if (sprite.GetType() == typeof(Enemy)) {
+                        collideWithEnemy((Enemy) sprite, sprites);
                     }
                 }
             }
@@ -74,7 +102,6 @@ namespace Rapid1.Sprites
             //adjust player positions
             Velocity = new Vector2(SpeedX * (float)gameTime.ElapsedGameTime.TotalSeconds, SpeedY * (float)gameTime.ElapsedGameTime.TotalSeconds);
             Position += Velocity;
-
             
         }
 
@@ -106,6 +133,61 @@ namespace Rapid1.Sprites
             {
                 SpeedY += 20;
             }
+        }
+
+        private void collideWithEnemy(Enemy enemy, List<Sprite> spriteList) {
+            //if its a green enemy
+            if (enemy.enemyType == 1)
+            {
+                //if it's colliding
+                if ((this.SpeedY > 0 && this.IsTouchingTop(enemy)) || (this.SpeedY < 0 & this.IsTouchingBottom(enemy)))
+                {
+                    //if player has enough speed
+                    if (SpeedY > GREENSPEED)
+                    {
+                        this.SpeedY = -SpeedY * 1.5F;
+                        enemy.isActive = false;
+                    }
+                    else {
+                        health--;
+                    }
+                }
+            }
+            else if (enemy.enemyType == 2)
+            {
+                //if it's colliding
+                if ((this.SpeedY > 0 && this.IsTouchingTop(enemy)) || (this.SpeedY < 0 & this.IsTouchingBottom(enemy)))
+                {
+                    //if player has enough speed
+                    if (SpeedY > YELLOWSPEED)
+                    {
+                        this.SpeedY = -SpeedY * 1.5F;
+                        enemy.isActive = false;
+                    }
+                    else
+                    {
+                        health--;
+                    }
+                }
+            }
+            if (enemy.enemyType == 3)
+            {
+                //if it's colliding
+                if ((this.SpeedY > 0 && this.IsTouchingTop(enemy)) || (this.SpeedY < 0 & this.IsTouchingBottom(enemy)))
+                {
+                    //if player has enough speed
+                    if (SpeedY > REDSPEED)
+                    {
+                        this.SpeedY = -SpeedY * 1.5F;
+                        enemy.isActive = false;
+                    }
+                    else
+                    {
+                        health--;
+                    }
+                }
+            }
+
         }
     }
 }

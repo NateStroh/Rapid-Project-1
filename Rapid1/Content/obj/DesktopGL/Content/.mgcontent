@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/Block.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/GreenEnemy.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-1.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-2.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-3.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Green1.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Green2.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Green3.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Red1.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Red2.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Yellow1.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Yellow2.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/Small.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/testPlayer.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
