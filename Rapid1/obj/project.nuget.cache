@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qylTaL5KSjn0IJqTcl5IoSD9UuqDkTV2NWvH+8Dal58w2aJTPPMS5Eawds+exJ7ly2qY9CRMw2xRO5W/N0IqjA==",
+  "dgSpecHash": "52DYGQk1TYrJqxxjMM3+Kz7Q593CjbNmgOTLkPLLtukvZnosQ+es+ZC4dW55dBw+UW8xkLS6d0GHrnuOztppMw==",
   "success": true,
-  "projectFilePath": "A:\\THE_ARC\\Projects\\Rapid-Project-1\\Rapid1\\Rapid1.csproj",
+  "projectFilePath": "E:\\School\\UofU\\Rapid\\Rapid-Project-1\\Rapid1\\Rapid1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\theog\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\theog\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    "C:\\Users\\dstro\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\dstro\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }

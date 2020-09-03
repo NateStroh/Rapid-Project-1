@@ -48,7 +48,7 @@ namespace Rapid1.Sprites
 
             foreach (var sprite in sprites) 
             {
-                if (sprite != this) 
+                if (sprite != this && sprite.isActive) 
                 {
                     //this should stop the player if they hit a paddle
                     if (sprite.GetType() == typeof(Paddle))
@@ -75,7 +75,7 @@ namespace Rapid1.Sprites
                             }
                         }
                     }
-                    else if (sprite.GetType() == typeof(Enemy)) {
+                    else if (sprite.GetType() == typeof(Enemy) && sprite.isActive) {
                         collideWithEnemy((Enemy) sprite, sprites);
                     }
                 }
@@ -83,7 +83,7 @@ namespace Rapid1.Sprites
 
             foreach (var sprite in sprites)
             {
-                if (sprite != this)
+                if (sprite != this && sprite.isActive)
                 {
                     
                     if ((this.SpeedX > 0 && this.IsTouchingLeft(sprite)) || (this.SpeedX < 0 & this.IsTouchingRight(sprite)))
@@ -207,7 +207,6 @@ namespace Rapid1.Sprites
                     }
                 }
             }
-
         }
 
         public void Respawn()

@@ -191,7 +191,10 @@ namespace Rapid1
                 Exit();
 
             foreach (var sprite in sprites) {
-                sprite.Update(gameTime, sprites);
+                if (sprite.isActive) {
+                    sprite.Update(gameTime, sprites);
+                }
+                
                 if(sprite.GetType() == typeof(Player))
                 {
                     _cam.Follow(sprite.Position, sprite.texture);
@@ -199,8 +202,12 @@ namespace Rapid1
                 }
             }
 
-            if (player.getHealth() == 0 || player.Position.Y > 3000)
+            if (player.getHealth() == 0 || player.Position.Y > 3000){
+                foreach (var sprite in sprites){
+                    sprite.isActive = true;
+                }
                 player.Respawn();
+            }
             
 
             base.Update(gameTime);

@@ -90,3 +90,19 @@ A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 2.xnb
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 3.xnb
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\PP background.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 1.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 2.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 3.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_001.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_001_2.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_002.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_003.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_004.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_005.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_006.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\house\texture_bg_ruin_building_007.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_g_0001.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_r_0000.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_w_0004.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_y_0000.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\PP background.xnb
