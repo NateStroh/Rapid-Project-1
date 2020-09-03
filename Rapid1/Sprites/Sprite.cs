@@ -7,7 +7,9 @@ using System.Text;
 namespace Rapid1.Sprites
 {
     class Sprite {
+
         public Texture2D texture;
+        public float scale;
         public Vector2 Position;
         public Vector2 Velocity;
         public Color color;
@@ -17,13 +19,14 @@ namespace Rapid1.Sprites
 
         //a collision box for each sprite
         public Rectangle SpriteBox {
-            get{ return new Rectangle((int)Position.X, (int)Position.Y, texture.Width, texture.Height); }
+            get{ return new Rectangle((int)Position.X, (int)Position.Y, (int)(texture.Width*scale), (int)(texture.Height*scale)); }
         }
 
         public Sprite(Texture2D t) {
             texture = t;
             color = Color.White;
             isActive = true;
+            scale = 1f;
         }
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites){
@@ -31,7 +34,7 @@ namespace Rapid1.Sprites
         }
 
         public virtual void Draw(SpriteBatch spriteBatch){
-            spriteBatch.Draw(texture, Position, color);
+            spriteBatch.Draw(texture, Position, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         }
 
         protected bool isColliding(Sprite sprite) {

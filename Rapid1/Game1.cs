@@ -36,7 +36,7 @@ namespace Rapid1
 
             _graphics.PreferredBackBufferWidth = screenWidth;
             _graphics.PreferredBackBufferHeight = screenHeight;
-            _graphics.ToggleFullScreen();
+            //_graphics.ToggleFullScreen();
             _graphics.ApplyChanges();
 
 
@@ -50,60 +50,133 @@ namespace Rapid1
 
             sprites = new List<Sprite>() {
             // TODO: load in player, paddles(floor shit), enemies
-                new Player(Content.Load<Texture2D>("testPlayer"))
+                new Player(Content.Load<Texture2D>("player/texture_cha_idle_w_0004"))
                 {
-                    Position = new Vector2(100, 100)
-
+                    Position = new Vector2(10000, -1000),
+                    scale = .5f
                 },
 
-                new Sprite(Content.Load<Texture2D>("Block"))
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_004"))
                 {
-                    Position = new Vector2(0,1000)
+                    Position = new Vector2(-400,800),
+                    scale = 5f
                 },
 
                 new Paddle(Content.Load<Texture2D>("platform/Platform-Green1"))
                 {
-                    Position = new Vector2(300,800),
+                    Position = new Vector2(5000,600),
                     paddleType = 1
+                },
+
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_003"))
+                {
+                    Position = new Vector2(5500,300),
+                    scale = 5f
+                },
+
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Green1"))
+                {
+                    Position = new Vector2(9000,0),
+                    paddleType = 1
+                },
+
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_003"))
+                {
+                    Position = new Vector2(9500,-200),
+                    scale = 5f
                 },
 
                 new Paddle(Content.Load<Texture2D>("platform/Platform-Yellow2"))
                 {
-                    Position = new Vector2(900,800),
+                    Position = new Vector2(14500,1200),
                     paddleType = 2
                 },
 
-                new Paddle(Content.Load<Texture2D>("platform/Platform-Red2"))
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Yellow1"))
                 {
-                    Position = new Vector2(1600,1000),
-                    paddleType = 3
+                    Position = new Vector2(16000,500),
+                    paddleType = 2
                 },
 
-                new Enemy(Content.Load<Texture2D>("GreenEnemy"))
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Yellow1"))
                 {
-                    Position = new Vector2(2000,1000),
-                    enemyType = 1,
+                    Position = new Vector2(17500,0),
+                    paddleType = 2
                 },
 
-                new Enemy(Content.Load<Texture2D>("GreenEnemy"))
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_001"))
                 {
-                    Position = new Vector2(2500,1000),
-                    enemyType = 2,
-                    color = Color.Yellow,
+                    Position = new Vector2(18500,-1000),
+                    scale = 5f
                 },
 
-                new Enemy(Content.Load<Texture2D>("GreenEnemy"))
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 3"))
                 {
-                    Position = new Vector2(3000,1000),
+                    Position = new Vector2(18500,-1400),
                     enemyType = 3,
-                    color = Color.Red,
                 },
 
-                new Enemy(Content.Load<Texture2D>("GreenEnemy"))
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
                 {
-                    Position = new Vector2(-800,800),
+                    Position = new Vector2(20000,500),
                     enemyType = 1,
                 },
+
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_001"))
+                {
+                    Position = new Vector2(21000,0),
+                    scale = 5f
+                },
+
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 2"))
+                {
+                    Position = new Vector2(21000,-400),
+                    enemyType = 2,
+                },
+
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
+                {
+                    Position = new Vector2(22500, 400),
+                    enemyType = 1,
+                },
+
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
+                {
+                    Position = new Vector2(23500, 0),
+                    enemyType = 1,
+                },
+
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
+                {
+                    Position = new Vector2(24500, 800),
+                    enemyType = 1,
+                },
+
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
+                {
+                    Position = new Vector2(25500, 900),
+                    enemyType = 1,
+                },
+
+                new Paddle(Content.Load<Texture2D>("platform/Platform-Red1"))
+                {
+                    Position = new Vector2(26000,-200),
+                    paddleType = 2,
+                    scale = 2
+                },
+                
+                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 3"))
+                {
+                    Position = new Vector2(26500, 1700),
+                    enemyType = 3,
+                },
+
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_003"))
+                {
+                    Position = new Vector2(30000,0),
+                    scale = 5f
+                },
+
             };
 
 
@@ -123,15 +196,16 @@ namespace Rapid1
                 }
             }
 
-            if (player.getHealth() == 0)
-                Exit();
+            if (player.getHealth() == 0 || player.Position.Y > 3000)
+                player.Respawn();
+            
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             _spriteBatch.Begin(transformMatrix: _cam.Transform);
 
@@ -143,5 +217,6 @@ namespace Rapid1
 
             base.Draw(gameTime);
         }
+
     }
 }

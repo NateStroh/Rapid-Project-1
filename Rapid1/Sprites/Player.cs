@@ -11,10 +11,10 @@ namespace Rapid1.Sprites
     {
         private bool hasJumped;
         private int health = 1;
-        private const int REDSPEED = 1100;
-        private const int YELLOWSPEED = 700;
+        private const int REDSPEED = 2000;
+        private const int YELLOWSPEED = 1000;
         private const int GREENSPEED = 500;
-
+        int speedCap = 2000;
         public Player(Texture2D texture) : base(texture) {
 
         }
@@ -27,7 +27,7 @@ namespace Rapid1.Sprites
             //get user input
             pollKeys();
             //Gravity acting on the player
-            SpeedY += 20;
+            SpeedY += 40;
 
             //this is just test code to change player color instead of the different textures
             if (SpeedY > REDSPEED)
@@ -57,14 +57,14 @@ namespace Rapid1.Sprites
                         {
                             if ((this.SpeedY > 0 && this.IsTouchingTop(sprite)) || (this.SpeedY < 0 & this.IsTouchingBottom(sprite)))
                             {
-                                this.SpeedY = -SpeedY * .9F;
+                                this.SpeedY = -SpeedY - 400;
                             }
                         }
                         else if (((Paddle)sprite).paddleType == 2)
                         {
                             if ((this.SpeedY > 0 && this.IsTouchingTop(sprite)) || (this.SpeedY < 0 & this.IsTouchingBottom(sprite)))
                             {
-                                this.SpeedY = -SpeedY;
+                                this.SpeedY = -SpeedY - 600;
                             }
                         }
                         else if (((Paddle)sprite).paddleType == 3)
@@ -99,6 +99,26 @@ namespace Rapid1.Sprites
                 }
             }
 
+            
+            //Speed Cap
+            if(SpeedX > speedCap)
+            {
+                SpeedX = MathHelper.Lerp(SpeedX, speedCap, .02f);
+            }
+            else if(SpeedX < -speedCap)
+            {
+                SpeedX = MathHelper.Lerp(SpeedX, -speedCap, .02f);
+            }
+
+            if (SpeedY > speedCap)
+            {
+                SpeedY = MathHelper.Lerp(SpeedY, speedCap, .02f);
+            }
+            else if (SpeedY < -speedCap)
+            {
+                SpeedY = MathHelper.Lerp(SpeedY, -speedCap, .02f);
+            }
+
             //adjust player positions
             Velocity = new Vector2(SpeedX * (float)gameTime.ElapsedGameTime.TotalSeconds, SpeedY * (float)gameTime.ElapsedGameTime.TotalSeconds);
             Position += Velocity;
@@ -110,12 +130,12 @@ namespace Rapid1.Sprites
             //move character - WASD
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                SpeedX = MathHelper.Lerp(SpeedX, -1000, .2f);
+                SpeedX = MathHelper.Lerp(SpeedX, -1500, .2f);
 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                SpeedX = MathHelper.Lerp(SpeedX, 1000, .2f);
+                SpeedX = MathHelper.Lerp(SpeedX, 1500, .2f);
 
             }
             else
@@ -127,7 +147,7 @@ namespace Rapid1.Sprites
             {
                 hasJumped = true;
                 Position.Y -= 5;
-                SpeedY = -800;
+                SpeedY = -1400;
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.S))
             {
@@ -145,7 +165,7 @@ namespace Rapid1.Sprites
                     //if player has enough speed
                     if (SpeedY > GREENSPEED)
                     {
-                        this.SpeedY = -SpeedY * 1.5F;
+                        this.SpeedY = -SpeedY - 200;
                         enemy.isActive = false;
                     }
                     else {
@@ -161,7 +181,7 @@ namespace Rapid1.Sprites
                     //if player has enough speed
                     if (SpeedY > YELLOWSPEED)
                     {
-                        this.SpeedY = -SpeedY * 1.5F;
+                        this.SpeedY = -SpeedY - 400;
                         enemy.isActive = false;
                     }
                     else
@@ -178,7 +198,7 @@ namespace Rapid1.Sprites
                     //if player has enough speed
                     if (SpeedY > REDSPEED)
                     {
-                        this.SpeedY = -SpeedY * 1.5F;
+                        this.SpeedY = -SpeedY *1.5f;
                         enemy.isActive = false;
                     }
                     else
@@ -188,6 +208,11 @@ namespace Rapid1.Sprites
                 }
             }
 
+        }
+
+        public void Respawn()
+        {
+            Position = new Vector2(100, 100);
         }
     }
 }

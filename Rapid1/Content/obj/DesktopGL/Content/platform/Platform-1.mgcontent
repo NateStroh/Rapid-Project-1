@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-1.png</SourceFile>
-  <SourceTime>2020-09-01T08:46:40.1368461-06:00</SourceTime>
-  <DestFile>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/bin/DesktopGL/Content/platform/Platform-1.xnb</DestFile>
-  <DestTime>2020-09-01T09:09:12.4504377-06:00</DestTime>
+  <SourceFile>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-1.png</SourceFile>
+  <SourceTime>2020-08-31T23:58:24-06:00</SourceTime>
+  <DestFile>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/bin/DesktopGL/Content/platform/Platform-1.xnb</DestFile>
+  <DestTime>2020-09-02T21:17:40.1216307-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

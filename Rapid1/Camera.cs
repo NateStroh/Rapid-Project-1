@@ -13,13 +13,10 @@ namespace Rapid1
 
         public void Follow(Vector2 position, Texture2D text)
         {
-            Transform = Matrix.CreateTranslation(
-                -position.X - text.Width / 2,
-                -position.Y - text.Height / 2,
-                0) * Matrix.CreateTranslation(
-                Game1.screenWidth / 2,
-                Game1.screenHeight / 2,
-                0);
+            Transform 
+                = Matrix.CreateTranslation(-position.X,0,0) * 
+                  Matrix.CreateScale(.2f) *
+                  Matrix.CreateTranslation(Game1.screenWidth * .5f, Game1.screenHeight * .5f, 0);
 
         }
 
