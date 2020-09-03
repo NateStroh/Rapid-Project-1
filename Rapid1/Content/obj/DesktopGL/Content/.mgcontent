@@ -29,8 +29,10 @@
     <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_r_0000.png</File>
     <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_w_0004.png</File>
     <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_y_0000.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/PP background.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

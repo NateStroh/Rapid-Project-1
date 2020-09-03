@@ -18,6 +18,7 @@ namespace Rapid1
 
         private List<Sprite> sprites;
         private Player player;
+        private Texture2D background;
 
         public Game1()
         {
@@ -47,6 +48,8 @@ namespace Rapid1
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _cam = new Camera();
+
+            background = Content.Load<Texture2D>("PP background");
 
             sprites = new List<Sprite>() {
             // TODO: load in player, paddles(floor shit), enemies
@@ -208,6 +211,8 @@ namespace Rapid1
             GraphicsDevice.Clear(Color.Black);
 
             _spriteBatch.Begin(transformMatrix: _cam.Transform);
+
+            _spriteBatch.Draw(background, new Vector2(-4000,-14000), null, Color.White, 0f, Vector2.Zero, 4.5f, SpriteEffects.None, 0f);
 
             foreach (var sprite in sprites){
                 if (sprite.isActive) 
