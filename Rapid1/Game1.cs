@@ -55,7 +55,7 @@ namespace Rapid1
             // TODO: load in player, paddles(floor shit), enemies
                 new Player(Content.Load<Texture2D>("player/texture_cha_idle_w_0004"))
                 {
-                    Position = new Vector2(10000, -1000),
+                    Position = new Vector2(100, -1000),
                     scale = .5f
                 },
 
