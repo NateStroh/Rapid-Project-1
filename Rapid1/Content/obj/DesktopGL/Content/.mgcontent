@@ -4,32 +4,32 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 1.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 2.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 3.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_001.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_001_2.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_002.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_003.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_004.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_005.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_006.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_007.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-1.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-2.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-3.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Green1.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Green2.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Green3.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Red1.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Red2.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Yellow1.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/platform/Platform-Yellow2.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_g_0001.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_r_0000.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_w_0004.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_y_0000.png</File>
-    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/PP background.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 1.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 2.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 3.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_001.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_001_2.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_002.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_003.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_004.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_005.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_006.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_007.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-1.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-2.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-3.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Green1.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Green2.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Green3.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Red1.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Red2.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Yellow1.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/platform/Platform-Yellow2.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_g_0001.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_r_0000.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_w_0004.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/player/texture_cha_idle_y_0000.png</File>
+    <File>A:/THE_ARC/Projects/Rapid-Project-1/Rapid1/Content/PP background.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

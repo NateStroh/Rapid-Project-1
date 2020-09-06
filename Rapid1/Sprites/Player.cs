@@ -207,6 +207,10 @@ namespace Rapid1.Sprites
                     }
                 }
             }
+            if (enemy.enemyType == 0 && this.isColliding(enemy))
+            {
+                health = 0;
+            }
         }
 
         public void Respawn()

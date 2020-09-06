@@ -11,6 +11,7 @@ namespace Rapid1.Sprites
         //1 for green
         //2 for yellow
         //3 for red
+        //0 for deathwall
         public int enemyType;
         public Enemy(Texture2D texture) : base(texture)
         {
@@ -19,7 +20,10 @@ namespace Rapid1.Sprites
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-
+            if(this.enemyType == 0)
+            {
+                this.Position += new Vector2(17,0);
+            }
         }
     }
 }
