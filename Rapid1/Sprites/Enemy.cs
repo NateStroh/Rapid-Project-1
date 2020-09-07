@@ -17,13 +17,24 @@ namespace Rapid1.Sprites
         {
 
         }
+        public Enemy(Dictionary<string, Animation> animationDict) : base(animationDict)
+        {
+
+        }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-            if(this.enemyType == 0)
-            {
+            if(this.enemyType == 0){
                 this.Position += new Vector2(17,0);
             }
+            if (animations != null) {
+                updateAnimations();
+                animationManager.Update(gameTime);
+            }    
+        }
+
+        private void updateAnimations(){
+            animationManager.playAnimation(animations["idle"]);
         }
     }
 }

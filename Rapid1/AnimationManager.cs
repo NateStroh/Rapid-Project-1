@@ -2,12 +2,14 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Data;
+using System.Reflection.Metadata.Ecma335;
 
 public class AnimationManager
 {
 	private Animation a;
 	float timer;
-	public Vector2 position;
+	public float scale;
+	public Vector2 animationPosition;
 
 	public AnimationManager(Animation animation){
 		a = animation;
@@ -26,7 +28,7 @@ public class AnimationManager
 		timer = 0;
 	}
 
-	public void update(GameTime gameTime) {
+	public void Update(GameTime gameTime) {
 		timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
 		if (timer > a.frameSpeed) {
@@ -39,7 +41,7 @@ public class AnimationManager
 		}
 	}
 
-	public void draw(SpriteBatch spriteBatch){
-		spriteBatch.Draw(a.texture, new Rectangle(a.frameWidth * a.currFrame, 0, a.frameHeight, a.frameWidth), a.color);
+	public void Draw(SpriteBatch spriteBatch){
+		spriteBatch.Draw(a.texture, animationPosition, new Rectangle(a.frameWidth * a.currFrame, 0, a.frameWidth, a.frameHeight), a.color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
 	}
 }

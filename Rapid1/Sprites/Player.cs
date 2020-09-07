@@ -20,6 +20,10 @@ namespace Rapid1.Sprites
 
         }
 
+        public Player(Dictionary<string, Animation> animationDict) : base(animationDict) {
+
+        }
+
         public int getHealth(){
             return health;
         }
@@ -27,6 +31,7 @@ namespace Rapid1.Sprites
         public override void Update(GameTime gameTime, List<Sprite> sprites) {
             //get user input
             pollKeys();
+            //updateAnimations();
             //Gravity acting on the player
             SpeedY += 40;
 
@@ -131,12 +136,12 @@ namespace Rapid1.Sprites
             //move character - WASD
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                SpeedX = MathHelper.Lerp(SpeedX, -2500, .1f);
+                SpeedX = MathHelper.Lerp(SpeedX, -2700, .1f);
 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                SpeedX = MathHelper.Lerp(SpeedX, 2500, .1f);
+                SpeedX = MathHelper.Lerp(SpeedX, 2700, .1f);
 
             }
             else
@@ -154,6 +159,13 @@ namespace Rapid1.Sprites
             {
                 SpeedY += 20;
             }
+        }
+
+        private void updateAnimations() {
+            animationManager.playAnimation(animations["right"]);
+            animationManager.playAnimation(animations["left"]);
+            animationManager.playAnimation(animations["falling"]);
+            animationManager.playAnimation(animations["jumping"]);
         }
 
         private void collideWithEnemy(Enemy enemy, List<Sprite> spriteList) {

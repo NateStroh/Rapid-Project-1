@@ -17,12 +17,20 @@ namespace Rapid1.Sprites
         public float SpeedX;
         public float SpeedY;
         public bool isActive;
-        private AnimationManager animationManager;
-        private Dictionary<string, Animation> animations;
+        public AnimationManager animationManager;
+        protected Dictionary<string, Animation> animations;
 
         //a collision box for each sprite
         public Rectangle SpriteBox {
-            get{ return new Rectangle((int)Position.X, (int)Position.Y, (int)(texture.Width*scale), (int)(texture.Height*scale)); }
+            get{
+                if (texture != null)
+                {
+                    return new Rectangle((int)Position.X, (int)Position.Y, (int)(texture.Width * scale), (int)(texture.Height * scale));
+                }
+                else {
+                    return new Rectangle((int)Position.X, (int)Position.Y, (int)(animations.First().Value.frameWidth * scale), (int)(animations.First().Value.frameHeight * scale));
+                }
+            }
         }
 
         public Sprite(Texture2D t) {
@@ -37,18 +45,27 @@ namespace Rapid1.Sprites
         {
             texture = null;
             animations = animationDict;
-            AnimationManager am = new AnimationManager(animationDict.First().Value);
+            animationManager = new AnimationManager(animationDict.First().Value);
             color = Color.White;
             isActive = true;
             scale = 1f;
+            animationManager.animationPosition = Position;
+            animationManager.scale = scale;
         }
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites){
 
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch){
-            spriteBatch.Draw(texture, Position, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        public virtual void Draw(SpriteBatch spriteBatch) {
+            if (texture != null)
+            {
+                spriteBatch.Draw(texture, Position, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            }
+            else if (animations != null)
+            {
+                animationManager.Draw(spriteBatch);
+            }
         }
 
         protected bool isColliding(Sprite sprite) {

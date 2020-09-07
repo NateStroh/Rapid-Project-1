@@ -4,8 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 1 Idle.png</File>
     <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 1.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 2 idle.png</File>
     <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 2.png</File>
+    <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 3 idle.png</File>
     <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/enemy/PP enemy 3.png</File>
     <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_001.png</File>
     <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/house/texture_bg_ruin_building_001_2.png</File>
@@ -32,6 +35,9 @@
     <File>E:/School/UofU/Rapid/Rapid-Project-1/Rapid1/Content/PP background.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

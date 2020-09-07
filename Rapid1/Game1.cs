@@ -129,8 +129,16 @@ namespace Rapid1
                     enemyType = 3,
                 },
 
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
+                /*new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
                 {
+                    Position = new Vector2(20000,500),
+                    enemyType = 1,
+                },*/
+
+                //animated enemy
+                new Enemy(new Dictionary<string, Animation> () {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
+                }){
                     Position = new Vector2(20000,500),
                     enemyType = 1,
                 },
