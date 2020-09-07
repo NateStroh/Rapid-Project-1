@@ -130,12 +130,12 @@ namespace Rapid1.Sprites
             //move character - WASD
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
-                SpeedX = MathHelper.Lerp(SpeedX, -1500, .1f);
+                SpeedX = MathHelper.Lerp(SpeedX, -2500, .1f);
 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                SpeedX = MathHelper.Lerp(SpeedX, 1500, .1f);
+                SpeedX = MathHelper.Lerp(SpeedX, 2500, .1f);
 
             }
             else
