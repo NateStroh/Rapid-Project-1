@@ -11,17 +11,14 @@ namespace Rapid1.Sprites
     {
         private bool hasJumped;
         private int health = 1;
-        private const int REDSPEED = 2000;
-        private const int YELLOWSPEED = 1000;
-        private const int GREENSPEED = 500;
+        public const int REDSPEED = 2000;
+        public const int YELLOWSPEED = 1000;
+        public const int GREENSPEED = 500;
 
         int speedCap = 2000;
-        public Player(Texture2D texture) : base(texture) {
 
-        }
-
-        public Player(Dictionary<string, Animation> animationDict) : base(animationDict) {
-
+        public Player(Dictionary<string, Animation> animationDict, Vector2 pos) : base(animationDict, pos) {
+            
         }
 
         public int getHealth(){
@@ -31,7 +28,11 @@ namespace Rapid1.Sprites
         public override void Update(GameTime gameTime, List<Sprite> sprites) {
             //get user input
             pollKeys();
-            //updateAnimations();
+            if (animations != null) {
+                animationManager.animationPosition = Position;
+                updateAnimations();
+                animationManager.Update(gameTime);
+            }
             //Gravity acting on the player
             SpeedY += 40;
 
@@ -162,10 +163,115 @@ namespace Rapid1.Sprites
         }
 
         private void updateAnimations() {
-            animationManager.playAnimation(animations["right"]);
-            animationManager.playAnimation(animations["left"]);
-            animationManager.playAnimation(animations["falling"]);
-            animationManager.playAnimation(animations["jumping"]);
+            if (SpeedY > REDSPEED || SpeedX > REDSPEED)
+            {
+                playerAnimations("Red");
+            }
+            else if (SpeedY > YELLOWSPEED || SpeedX > YELLOWSPEED)
+            {
+                playerAnimations("Yellow");
+            }
+            else if (SpeedY > GREENSPEED || SpeedX > GREENSPEED)
+            {
+                playerAnimations("Green");
+            }
+            else {
+                playerAnimations("Grey");
+            }
+        }
+
+        private void playerAnimations(string state) {
+            switch (state){
+                case "Red":
+                    if (SpeedY > 0) {
+                        animationManager.playAnimation(animations["RedFalling"]);
+                    }
+                    else if (SpeedY < 0) {
+                        animationManager.playAnimation(animations["RedUp"]);
+                    }
+                    else if (SpeedX > 0)
+                    {
+                        animationManager.playAnimation(animations["RedWalkRight"]);
+                    }
+                    /*else if (SpeedX < 0)
+                    {
+                        animationManager.playAnimation(animations["RedWalkLeft"]);
+                    }*/
+                    else
+                    {
+                        animationManager.playAnimation(animations["RedIdle"]);
+                    }
+                    return;
+
+                case "Yellow":
+                    if (SpeedY > 0)
+                    {
+                        animationManager.playAnimation(animations["YellowFalling"]);
+                    }
+                    else if (SpeedY < 0)
+                    {
+                        animationManager.playAnimation(animations["YellowUp"]);
+                    }
+                    else if (SpeedX > 0)
+                    {
+                        animationManager.playAnimation(animations["YellowWalkRight"]);
+                    }
+                    /*else if (SpeedX < 0)
+                    {
+                        animationManager.playAnimation(animations["YellowWalkLeft"]);
+                    }*/
+                    else
+                    {
+                        animationManager.playAnimation(animations["YellowIdle"]);
+                    }
+                    return;
+
+                case "Green":
+                    if (SpeedY > 0)
+                    {
+                        animationManager.playAnimation(animations["GreenFalling"]);
+                    }
+                    else if (SpeedY < 0)
+                    {
+                        animationManager.playAnimation(animations["GreenUp"]);
+                    }
+                    else if (SpeedX > 0)
+                    {
+                        animationManager.playAnimation(animations["GreenWalkRight"]);
+                    }
+                    /*else if (SpeedX < 0)
+                    {
+                        animationManager.playAnimation(animations["GreenWalkLeft"]);
+                    }*/
+                    else
+                    {
+                        animationManager.playAnimation(animations["GreenIdle"]);
+                    }
+                    return;
+
+                case "Grey":
+                    if (SpeedY > 0)
+                    {
+                        animationManager.playAnimation(animations["GreyFalling"]);
+                    }
+                    else if (SpeedY < 0)
+                    {
+                        animationManager.playAnimation(animations["GreyUp"]);
+                    }
+                    else if (SpeedX > 0)
+                    {
+                        animationManager.playAnimation(animations["GreyWalkRight"]);
+                    }
+                    /*else if (SpeedX < 0)
+                    {
+                        animationManager.playAnimation(animations["GreyWalkLeft"]);
+                    }*/
+                    else
+                    {
+                        animationManager.playAnimation(animations["GreyIdle"]);
+                    }
+                    return;
+            }
         }
 
         private void collideWithEnemy(Enemy enemy, List<Sprite> spriteList) {

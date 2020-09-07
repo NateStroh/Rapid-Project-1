@@ -6,7 +6,7 @@ using System.Reflection.Metadata.Ecma335;
 
 public class AnimationManager
 {
-	private Animation a;
+	public Animation a;
 	float timer;
 	public float scale;
 	public Vector2 animationPosition;

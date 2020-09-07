@@ -56,10 +56,38 @@ namespace Rapid1
             sprites = new List<Sprite>() {
             // TODO: load in player, paddles(floor shit), enemies
                 
-                new Player(Content.Load<Texture2D>("player/texture_cha_idle_w_0004"))
+                new Player(new Dictionary<string, Animation>() {
+                    {"RedFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_r_sheet_2000_500"), 4, .2f)},
+                    {"RedUp", new Animation(Content.Load<Texture2D>("player/texture_cha_jump_r_sheet_1500_1000"), 4, .2f)},
+                    {"RedWalkRight", new Animation(Content.Load<Texture2D>("player/texture_cha_walk_r_sheet_2000_500"), 4, .2f)},
+                    //{"RedLeft", new Animation(Content.Load<Texture2D>(""), 4, .2f)},
+                    {"RedIdle", new Animation(Content.Load<Texture2D>("player/texture_cha_idle_r_sheet_500_500"), 8, .2f)},
+                    {"YellowFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_y_sheet_2000_500"), 4, .2f)},
+                    {"YellowUp", new Animation(Content.Load<Texture2D>("player/texture_cha_jump_y_sheet_1500_1000"), 4, .2f)},
+                    {"YellowWalkRight", new Animation(Content.Load<Texture2D>("player/texture_cha_walk_y_sheet_2000_500"), 4, .2f)},
+                    //{"YellowLeft", new Animation(Content.Load<Texture2D>(""), 4, .2f)},
+                    {"YellowIdle", new Animation(Content.Load<Texture2D>("player/texture_cha_idle_y_sheet_500_500"), 8, .2f)},
+                    {"GreenFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_g_sheet_2000_500"), 4, .2f)},
+                    {"GreenUp", new Animation(Content.Load<Texture2D>("player/texture_cha_jump_g_sheet_1500_1000"), 4, .2f)},
+                    {"GreenWalkRight", new Animation(Content.Load<Texture2D>("player/texture_cha_walk_b_sheet_2000_500"), 4, .2f)},
+                    //{"GreenLeft", new Animation(Content.Load<Texture2D>(""), 4, .2f)},
+                    {"GreenIdle", new Animation(Content.Load<Texture2D>("player/texture_cha_idle_b_sheet_500_500"), 8, .2f)},
+                    {"GreyFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_w_sheet_2000_500"), 4, .2f)},
+                    {"GreyUp", new Animation(Content.Load<Texture2D>("player/texture_cha_jump_w_sheet_1500_1000"), 4, .2f)},
+                    {"GreyWalkRight", new Animation(Content.Load<Texture2D>("player/texture_cha_walk_w_sheet_2000_500"), 4, .2f)},
+                    //{"GreyLeft", new Animation(Content.Load<Texture2D>(""), 4, .2f)},
+                    {"GreyIdle", new Animation(Content.Load<Texture2D>("player/texture_cha_idle_w_sheet_500_500"), 8, .2f)},
+
+                    }, new Vector2(100, -1000))
                 {
-                    Position = new Vector2(100, -1000),
                     scale = .7f
+                },
+
+                new FireSprite(new Dictionary<string, Animation>() {
+                    {"Gfire", new Animation(Content.Load<Texture2D>("player/texture_fire_b_1500_500"), 6, .2f)},
+                    {"Yfire", new Animation(Content.Load<Texture2D>("player/texture_fire_y_1500_500"), 6, .2f)},
+                    {"Rfire", new Animation(Content.Load<Texture2D>("player/texture_fire_r_1500_500"), 6, .2f)}
+                }, new Vector2(100, -1000)){
                 },
 
                 new Enemy(Content.Load<Texture2D>("house/texture_bg_ruin_building_002"))
@@ -122,24 +150,17 @@ namespace Rapid1
                     Position = new Vector2(18500,-1000),
                     scale = 5f
                 },
-
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 3"))
-                {
-                    Position = new Vector2(18500,-1400),
+                
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 3 Idle"), 4, .2f)}
+                }, new Vector2(18500,-1400)){
                     enemyType = 3,
                 },
 
-                /*new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
-                {
-                    Position = new Vector2(20000,500),
-                    enemyType = 1,
-                },*/
-
                 //animated enemy
-                new Enemy(new Dictionary<string, Animation> () {
+                new Enemy(new Dictionary<string, Animation>() {
                     {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
-                }){
-                    Position = new Vector2(20000,500),
+                }, new Vector2(20000,500)){
                     enemyType = 1,
                 },
 
@@ -149,33 +170,33 @@ namespace Rapid1
                     scale = 5f
                 },
 
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 2"))
-                {
-                    Position = new Vector2(21000,-400),
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 2 Idle"), 4, .2f)}
+                }, new Vector2(21000,-400)){
                     enemyType = 2,
                 },
 
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
-                {
-                    Position = new Vector2(22500, 400),
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
+                }, new Vector2(22500, 400)){
                     enemyType = 1,
                 },
 
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
-                {
-                    Position = new Vector2(23500, 0),
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
+                }, new Vector2(23500, 0)){
                     enemyType = 1,
                 },
 
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
-                {
-                    Position = new Vector2(24500, 800),
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
+                }, new Vector2(24500, 800)){
                     enemyType = 1,
                 },
 
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 1"))
-                {
-                    Position = new Vector2(25500, 900),
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
+                }, new Vector2(25500, 900)){
                     enemyType = 1,
                 },
 
@@ -185,10 +206,10 @@ namespace Rapid1
                     paddleType = 2,
                     scale = 2
                 },
-                
-                new Enemy(Content.Load<Texture2D>("enemy/PP enemy 3"))
-                {
-                    Position = new Vector2(26500, 1700),
+
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 3 Idle"), 4, .2f)}
+                }, new Vector2(26500, 1700)){
                     enemyType = 3,
                 },
 

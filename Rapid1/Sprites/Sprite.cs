@@ -41,7 +41,7 @@ namespace Rapid1.Sprites
             scale = 1f;
         }
 
-        public Sprite(Dictionary<string, Animation> animationDict)
+        public Sprite(Dictionary<string, Animation> animationDict, Vector2 position)
         {
             texture = null;
             animations = animationDict;

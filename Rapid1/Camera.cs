@@ -15,7 +15,7 @@ namespace Rapid1
         {
             Transform 
                 = Matrix.CreateTranslation(-position.X,-position.Y*.8f,0) * 
-                  Matrix.CreateScale(.26f) *
+                  Matrix.CreateScale(.27f) *
                   Matrix.CreateTranslation(Game1.screenWidth * .5f, Game1.screenHeight * .5f, 0);
 
         }

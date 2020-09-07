@@ -17,7 +17,7 @@ namespace Rapid1.Sprites
         {
 
         }
-        public Enemy(Dictionary<string, Animation> animationDict) : base(animationDict)
+        public Enemy(Dictionary<string, Animation> animationDict, Vector2 pos) : base(animationDict, pos)
         {
 
         }
