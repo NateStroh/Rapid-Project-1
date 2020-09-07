@@ -174,32 +174,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\theog\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\dstro\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\THE_ARC\\Projects\\Rapid-Project-1\\Rapid1\\Rapid1.csproj",
+      "projectUniqueName": "E:\\School\\UofU\\Rapid\\Rapid-Project-1\\Rapid1\\Rapid1.csproj",
       "projectName": "Rapid1",
-      "projectPath": "A:\\THE_ARC\\Projects\\Rapid-Project-1\\Rapid1\\Rapid1.csproj",
-      "packagesPath": "C:\\Users\\theog\\.nuget\\packages\\",
-      "outputPath": "A:\\THE_ARC\\Projects\\Rapid-Project-1\\Rapid1\\obj\\",
+      "projectPath": "E:\\School\\UofU\\Rapid\\Rapid-Project-1\\Rapid1\\Rapid1.csproj",
+      "packagesPath": "C:\\Users\\dstro\\.nuget\\packages\\",
+      "outputPath": "E:\\School\\UofU\\Rapid\\Rapid-Project-1\\Rapid1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\theog\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\dstro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://teamcity.monogame.net/guestAuth/app/nuget/feed/_Root/default/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

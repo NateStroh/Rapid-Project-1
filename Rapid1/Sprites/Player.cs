@@ -14,6 +14,7 @@ namespace Rapid1.Sprites
         private const int REDSPEED = 2000;
         private const int YELLOWSPEED = 1000;
         private const int GREENSPEED = 500;
+
         int speedCap = 2000;
         public Player(Texture2D texture) : base(texture) {
 

@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Rapid1.Sprites
@@ -16,6 +17,8 @@ namespace Rapid1.Sprites
         public float SpeedX;
         public float SpeedY;
         public bool isActive;
+        private AnimationManager animationManager;
+        private Dictionary<string, Animation> animations;
 
         //a collision box for each sprite
         public Rectangle SpriteBox {
@@ -24,6 +27,17 @@ namespace Rapid1.Sprites
 
         public Sprite(Texture2D t) {
             texture = t;
+            animations = null;
+            color = Color.White;
+            isActive = true;
+            scale = 1f;
+        }
+
+        public Sprite(Dictionary<string, Animation> animationDict)
+        {
+            texture = null;
+            animations = animationDict;
+            AnimationManager am = new AnimationManager(animationDict.First().Value);
             color = Color.White;
             isActive = true;
             scale = 1f;
