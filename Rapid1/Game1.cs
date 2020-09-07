@@ -19,6 +19,8 @@ namespace Rapid1
         private List<Sprite> sprites;
         private Player player;
         private Texture2D background;
+        private Vector2 backgroundPos;
+        
 
         public Game1()
         {
@@ -39,7 +41,7 @@ namespace Rapid1
             _graphics.PreferredBackBufferHeight = screenHeight;
             //_graphics.ToggleFullScreen();
             _graphics.ApplyChanges();
-
+            backgroundPos = new Vector2(-4000, -7000);
 
             base.Initialize();
         }
@@ -53,10 +55,18 @@ namespace Rapid1
 
             sprites = new List<Sprite>() {
             // TODO: load in player, paddles(floor shit), enemies
+                
                 new Player(Content.Load<Texture2D>("player/texture_cha_idle_w_0004"))
                 {
                     Position = new Vector2(100, -1000),
-                    scale = .5f
+                    scale = .7f
+                },
+
+                new Enemy(Content.Load<Texture2D>("house/texture_bg_ruin_building_002"))
+                {
+                    Position = new Vector2(-4000,-2000),
+                    enemyType = 0,
+                    scale = 5f
                 },
 
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_004"))
@@ -205,10 +215,19 @@ namespace Rapid1
             if (player.getHealth() == 0 || player.Position.Y > 3000){
                 foreach (var sprite in sprites){
                     sprite.isActive = true;
+                    if(sprite.GetType() == typeof(Enemy))
+                    {
+                        if (((Enemy)sprite).enemyType == 0)
+                        {
+                            sprite.Position = new Vector2(-4000, -2000);
+                        }
+                    }
                 }
                 player.Respawn();
+                backgroundPos = new Vector2(-4000, -7000);
             }
-            
+
+            backgroundPos = backgroundPos + (player.Velocity * .7f);
 
             base.Update(gameTime);
         }
@@ -219,7 +238,7 @@ namespace Rapid1
 
             _spriteBatch.Begin(transformMatrix: _cam.Transform);
 
-            _spriteBatch.Draw(background, new Vector2(-4000,-14000), null, Color.White, 0f, Vector2.Zero, 4.5f, SpriteEffects.None, 0f);
+            _spriteBatch.Draw(background, backgroundPos, null, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
 
             foreach (var sprite in sprites){
                 if (sprite.isActive) 
