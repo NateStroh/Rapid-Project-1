@@ -150,7 +150,7 @@ namespace Rapid1
                     Position = new Vector2(18500,-1000),
                     scale = 5f
                 },
-                
+
                 new Enemy(new Dictionary<string, Animation>() {
                     {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 3 Idle"), 4, .2f)}
                 }, new Vector2(18500,-1400)){

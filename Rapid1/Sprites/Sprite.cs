@@ -49,7 +49,9 @@ namespace Rapid1.Sprites
             color = Color.White;
             isActive = true;
             scale = 1f;
-            animationManager.animationPosition = Position;
+            animationManager.animationPosition = position;
+            Position = position;
+            //Console.WriteLine();
             animationManager.scale = scale;
         }
 
