@@ -55,7 +55,13 @@ namespace Rapid1
 
             sprites = new List<Sprite>() {
             // TODO: load in player, paddles(floor shit), enemies
-                
+                new FireSprite(new Dictionary<string, Animation>() {
+                    {"Gfire", new Animation(Content.Load<Texture2D>("player/texture_fire_b_1500_500"), 6, .2f)},
+                    {"Yfire", new Animation(Content.Load<Texture2D>("player/texture_fire_y_1500_500"), 6, .2f)},
+                    {"Rfire", new Animation(Content.Load<Texture2D>("player/texture_fire_r_1500_500"), 6, .2f)}
+                }, new Vector2(100, -1000)){
+                },
+
                 new Player(new Dictionary<string, Animation>() {
                     {"RedFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_r_sheet_2000_500"), 4, .2f)},
                     {"RedUp", new Animation(Content.Load<Texture2D>("player/texture_cha_jump_r_sheet_1500_1000"), 4, .2f)},
@@ -81,13 +87,6 @@ namespace Rapid1
                     }, new Vector2(100, -1000))
                 {
                     scale = .7f
-                },
-
-                new FireSprite(new Dictionary<string, Animation>() {
-                    {"Gfire", new Animation(Content.Load<Texture2D>("player/texture_fire_b_1500_500"), 6, .2f)},
-                    {"Yfire", new Animation(Content.Load<Texture2D>("player/texture_fire_y_1500_500"), 6, .2f)},
-                    {"Rfire", new Animation(Content.Load<Texture2D>("player/texture_fire_r_1500_500"), 6, .2f)}
-                }, new Vector2(100, -1000)){
                 },
 
                 new Enemy(Content.Load<Texture2D>("house/texture_bg_ruin_building_002"))

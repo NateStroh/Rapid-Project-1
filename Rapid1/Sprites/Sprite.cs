@@ -51,7 +51,6 @@ namespace Rapid1.Sprites
             scale = 1f;
             animationManager.animationPosition = position;
             Position = position;
-            //Console.WriteLine();
             animationManager.scale = scale;
         }
 

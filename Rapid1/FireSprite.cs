@@ -22,6 +22,7 @@ class FireSprite : Sprite
             }
         }
         this.Position = p.Position;
+        animationManager.animationPosition = p.Position;
         if (animations != null)
         {
             updateAnimations();
@@ -31,15 +32,15 @@ class FireSprite : Sprite
 
     private void updateAnimations()
     {
-        if (SpeedY > 2000 || SpeedX > 2000)
+        if (p.SpeedY > 2000 || p.SpeedX > 2000)
         {
             animationManager.playAnimation(animations["Rfire"]);
         }
-        else if (SpeedY > 1000 || SpeedX > 1000)
+        else if (p.SpeedY > 1000 || p.SpeedX > 1000)
         {
             animationManager.playAnimation(animations["Yfire"]);
         }
-        else if (SpeedY > 500 || SpeedX > 500)
+        else if (p.SpeedY > 500 || p.SpeedX > 500)
         {
             animationManager.playAnimation(animations["Gfire"]);
         }
