@@ -18,8 +18,7 @@ namespace Rapid1
         public static int screenHeight;
 
         private List<Sprite> sprites;
-        private List<Texture2D> backgroundBuildings;
-        private List<Vector2> backgroundBuildingsPos;
+        private List<Sprite> backgroundBuildings;
         private Player player;
         private Texture2D background;
         private Vector2 backgroundPos;
@@ -56,6 +55,16 @@ namespace Rapid1
 
             background = Content.Load<Texture2D>("PP background");
 
+            backgroundBuildings = new List<Sprite>()
+            {
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_004"))
+                {
+                    Position = new Vector2(4000,0),
+                    isCollider = false,
+                    scale = 2f
+                }
+            };
+
             sprites = new List<Sprite>() {
             // TODO: load in player, paddles(floor shit), enemies
                 new FireSprite(new Dictionary<string, Animation>() {
@@ -89,6 +98,7 @@ namespace Rapid1
 
                     }, new Vector2(100, -1000))
                 {
+                    isCollider = true,
                     //scale = .7f
                 },
 
