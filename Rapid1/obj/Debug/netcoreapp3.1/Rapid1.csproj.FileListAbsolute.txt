@@ -128,3 +128,25 @@ E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\play
 E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_b_1500_500.xnb
 E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_r_1500_500.xnb
 E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_y_1500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 1 Idle.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 2 idle.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_air_g_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_air_r_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_air_w_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_air_y_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_b_sheet_500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_r_sheet_500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_w_sheet_500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_idle_y_sheet_500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_jump_g_sheet_1500_1000.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_jump_r_sheet_1500_1000.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_jump_w_sheet_1500_1000.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_jump_y_sheet_1500_1000.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_walk_b_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_walk_r_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_walk_w_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_cha_walk_y_sheet_2000_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_b_1500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_r_1500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_y_1500_500.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 3 idle.xnb
