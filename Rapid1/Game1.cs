@@ -57,12 +57,30 @@ namespace Rapid1
 
             backgroundBuildings = new List<Sprite>()
             {
-                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_004"))
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_002"))
                 {
                     Position = new Vector2(4000,0),
                     isCollider = false,
                     scale = 2f
-                }
+                },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_006"))
+                {
+                    Position = new Vector2(8000,0),
+                    isCollider = false,
+                    scale = 2f
+                },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_007"))
+                {
+                    Position = new Vector2(12000,0),
+                    isCollider = false,
+                    scale = 4f
+                },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_001_2"))
+                {
+                    Position = new Vector2(16000,0),
+                    isCollider = false,
+                    scale = 2f
+                },
             };
 
             sprites = new List<Sprite>() {
@@ -269,10 +287,15 @@ namespace Rapid1
                 }
                 player.Respawn();
                 backgroundPos = new Vector2(-4000, -7000);
+                LoadContent();
             }
 
             backgroundPos = backgroundPos + (player.Velocity * .7f);
-            
+
+            foreach(var building in backgroundBuildings)
+            {
+                building.Position += (player.Velocity * .2f);
+            }
 
             base.Update(gameTime);
         }
@@ -284,6 +307,11 @@ namespace Rapid1
             _spriteBatch.Begin(transformMatrix: _cam.Transform);
 
             _spriteBatch.Draw(background, backgroundPos, null, Color.White, 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+
+            foreach (var building in backgroundBuildings)
+            {
+                building.Draw(_spriteBatch);
+            }
 
             foreach (var sprite in sprites){
                 if (sprite.isActive) 
