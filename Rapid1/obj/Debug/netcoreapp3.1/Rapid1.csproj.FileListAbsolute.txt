@@ -159,3 +159,11 @@ A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mount
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 3.xnb
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 4.xnb
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\deathwall.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\deathwall.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp back smoke 1.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp back smoke 2.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp back smoke 3.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 1.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 2.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 3.xnb
+E:\School\UofU\Rapid\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 4.xnb

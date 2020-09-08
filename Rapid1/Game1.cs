@@ -61,11 +61,11 @@ namespace Rapid1
                 {
                     Position = new Vector2(4000,0),
                     isCollider = false,
-                    scale = 2f
+                    scale = 4f
                 },
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_006"))
                 {
-                    Position = new Vector2(8000,0),
+                    Position = new Vector2(9000,-1000),
                     isCollider = false,
                     scale = 2f
                 },
@@ -78,6 +78,18 @@ namespace Rapid1
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_001_2"))
                 {
                     Position = new Vector2(16000,0),
+                    isCollider = false,
+                    scale = 2f
+                },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_007"))
+                {
+                    Position = new Vector2(20000,500),
+                    isCollider = false,
+                    scale = 4f
+                },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_003"))
+                {
+                    Position = new Vector2(26000,500),
                     isCollider = false,
                     scale = 2f
                 },
