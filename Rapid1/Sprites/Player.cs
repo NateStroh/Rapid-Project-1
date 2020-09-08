@@ -14,7 +14,6 @@ namespace Rapid1.Sprites
         public const int REDSPEED = 2000;
         public const int YELLOWSPEED = 1000;
         public const int GREENSPEED = 500;
-        public FireSprite fs;
 
         int speedCap = 2000;
 
