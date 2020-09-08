@@ -11,7 +11,7 @@ namespace Rapid1.Sprites
     {
         private bool hasJumped;
         private int health = 1;
-        public const int REDSPEED = 2000;
+        public const int REDSPEED = 3000;
         public const int YELLOWSPEED = 1000;
         public const int GREENSPEED = 500;
 
@@ -164,11 +164,11 @@ namespace Rapid1.Sprites
         }
 
         private void updateAnimations() {
-            if (SpeedY > REDSPEED || SpeedX > REDSPEED)
+            if (SpeedY > REDSPEED || SpeedX > REDSPEED + 600)
             {
                 playerAnimations("Red");
             }
-            else if (SpeedY > YELLOWSPEED || SpeedX > YELLOWSPEED)
+            else if (SpeedY > YELLOWSPEED || SpeedX > YELLOWSPEED + 2000)
             {
                 playerAnimations("Yellow");
             }

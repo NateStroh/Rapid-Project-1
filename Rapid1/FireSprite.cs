@@ -32,13 +32,13 @@ class FireSprite : Sprite
 
     private void updateAnimations()
     {
-        if (p.SpeedY > 2000 || p.SpeedX > 2000)
+        if (p.SpeedY > 3000 || p.SpeedX > 3600)
         {
             animationManager.scale = 1.5f;
             animationManager.animationPosition += new Vector2(-100, -100);
             animationManager.playAnimation(animations["Rfire"]);
         }
-        else if (p.SpeedY > 1000 || p.SpeedX > 1000)
+        else if (p.SpeedY > 1000 || p.SpeedX > 3000)
         {
             animationManager.scale = 1.3f;
             animationManager.animationPosition += new Vector2(-50, -50);
