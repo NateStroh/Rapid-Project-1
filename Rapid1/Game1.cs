@@ -57,17 +57,48 @@ namespace Rapid1
 
             backgroundBuildings = new List<Sprite>()
             {
+                new Sprite(Content.Load<Texture2D>("mountain/pp back smoke 2"))
+                {
+                    Position = new Vector2(2000,-2000),
+                    isCollider = false,
+                    scale = 4f
+                },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_001_2"))
+                {
+                    Position = new Vector2(-1000,-4000),
+                    isCollider = false,
+                    scale = 6f
+                },
+                new Sprite(Content.Load<Texture2D>("mountain/pp back smoke 3"))
+                {
+                    Position = new Vector2(2200,-1400),
+                    isCollider = false,
+                    scale = 2f
+                },
+                
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_002"))
                 {
                     Position = new Vector2(4000,0),
                     isCollider = false,
                     scale = 4f
                 },
+                new Sprite(Content.Load<Texture2D>("mountain/pp back smoke 3"))
+                {
+                    Position = new Vector2(8500,-1600),
+                    isCollider = false,
+                    scale = 1f
+                },
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_006"))
                 {
                     Position = new Vector2(9000,-1000),
                     isCollider = false,
                     scale = 2f
+                },
+                new Sprite(Content.Load<Texture2D>("mountain/pp back smoke 2"))
+                {
+                    Position = new Vector2(11000,-2500),
+                    isCollider = false,
+                    scale = 4f
                 },
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_007"))
                 {
@@ -81,17 +112,29 @@ namespace Rapid1
                     isCollider = false,
                     scale = 2f
                 },
+                new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_001"))
+                {
+                    Position = new Vector2(18000,-3000),
+                    isCollider = false,
+                    scale = 8f
+                },
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_007"))
                 {
-                    Position = new Vector2(20000,500),
+                    Position = new Vector2(22000,0),
                     isCollider = false,
                     scale = 4f
                 },
                 new Sprite(Content.Load<Texture2D>("house/texture_bg_ruin_building_003"))
                 {
-                    Position = new Vector2(26000,500),
+                    Position = new Vector2(25000,-500),
                     isCollider = false,
                     scale = 2f
+                },
+                new Sprite(Content.Load<Texture2D>("mountain/pp back smoke 2"))
+                {
+                    Position = new Vector2(25000,-3500),
+                    isCollider = false,
+                    scale = 6f
                 },
             };
 
@@ -243,6 +286,12 @@ namespace Rapid1
                     {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 1 Idle"), 4, .2f)}
                 }, new Vector2(25500, 900)){
                     enemyType = 1,
+                },
+
+                new Enemy(new Dictionary<string, Animation>() {
+                    {"idle", new Animation(Content.Load<Texture2D>("enemy/PP enemy 2 Idle"), 4, .2f)}
+                }, new Vector2(26000, -500)){
+                    enemyType = 2,
                 },
 
                 new Paddle(Content.Load<Texture2D>("platform/Platform-Red1"))
