@@ -13,10 +13,12 @@ namespace Rapid1.Sprites
         public float scale;
         public Vector2 Position;
         public Vector2 Velocity;
+        public float Rotation;
         public Color color;
         public float SpeedX;
         public float SpeedY;
         public bool isActive;
+        public bool isCollider;
         public AnimationManager animationManager;
         protected Dictionary<string, Animation> animations;
 
@@ -38,7 +40,9 @@ namespace Rapid1.Sprites
             animations = null;
             color = Color.White;
             isActive = true;
+            isCollider = true;
             scale = 1f;
+            Rotation = 0f;
         }
 
         public Sprite(Dictionary<string, Animation> animationDict, Vector2 position)
@@ -51,7 +55,7 @@ namespace Rapid1.Sprites
             scale = 1f;
             animationManager.animationPosition = position;
             Position = position;
-            animationManager.scale = scale;
+            
         }
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites){
@@ -61,7 +65,7 @@ namespace Rapid1.Sprites
         public virtual void Draw(SpriteBatch spriteBatch) {
             if (texture != null)
             {
-                spriteBatch.Draw(texture, Position, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(texture, Position, null, color, Rotation, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else if (animations != null)
             {
@@ -70,39 +74,69 @@ namespace Rapid1.Sprites
         }
 
         protected bool isColliding(Sprite sprite) {
+            if (!isCollider)
+            {
+                return false;
+            }
             return (IsTouchingBottom(sprite) || IsTouchingLeft(sprite) || IsTouchingRight(sprite) || IsTouchingTop(sprite));
         }
 
         protected bool IsTouchingLeft(Sprite sprite)
         {
+            if (!isCollider)
+            {
+                return false;
+            }
+
             return this.SpriteBox.Right + this.Velocity.X > sprite.SpriteBox.Left &&
               this.SpriteBox.Left < sprite.SpriteBox.Left &&
               this.SpriteBox.Bottom > sprite.SpriteBox.Top &&
               this.SpriteBox.Top < sprite.SpriteBox.Bottom;
+            
         }
 
         protected bool IsTouchingRight(Sprite sprite)
         {
+            if (!isCollider)
+            {
+                return false;
+            }
+
             return this.SpriteBox.Left + this.Velocity.X < sprite.SpriteBox.Right &&
               this.SpriteBox.Right > sprite.SpriteBox.Right &&
               this.SpriteBox.Bottom > sprite.SpriteBox.Top &&
               this.SpriteBox.Top < sprite.SpriteBox.Bottom;
+            
+             
         }
 
         protected bool IsTouchingTop(Sprite sprite)
         {
+            if (!isCollider)
+            {
+                return false;
+            }
+
             return this.SpriteBox.Bottom + this.Velocity.Y > sprite.SpriteBox.Top &&
               this.SpriteBox.Top < sprite.SpriteBox.Top &&
               this.SpriteBox.Right > sprite.SpriteBox.Left &&
               this.SpriteBox.Left < sprite.SpriteBox.Right;
+
+           
         }
 
         protected bool IsTouchingBottom(Sprite sprite)
         {
+            if (!isCollider)
+            {
+                return false;
+            }
+
             return this.SpriteBox.Top + this.Velocity.Y < sprite.SpriteBox.Bottom &&
               this.SpriteBox.Bottom > sprite.SpriteBox.Bottom &&
               this.SpriteBox.Right > sprite.SpriteBox.Left &&
               this.SpriteBox.Left < sprite.SpriteBox.Right;
+           
         }
     }
 }

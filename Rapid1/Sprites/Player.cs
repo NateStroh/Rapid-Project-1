@@ -327,7 +327,7 @@ namespace Rapid1.Sprites
                     }
                 }
             }
-            if (enemy.enemyType == 0 && this.isColliding(enemy))
+            if (enemy.enemyType == 0 && this.Position.X <= enemy.Position.X + 4000)
             {
                 health = 0;
             }

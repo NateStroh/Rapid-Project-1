@@ -150,3 +150,12 @@ A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\playe
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_r_1500_500.xnb
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\player\texture_fire_y_1500_500.xnb
 A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\enemy\PP enemy 3 idle.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp back smoke 1.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp back smoke 2.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp back smoke 3.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\PP background.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 1.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 2.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 3.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\pp smoke 4.xnb
+A:\THE_ARC\Projects\Rapid-Project-1\Rapid1\bin\Debug\netcoreapp3.1\Content\mountain\deathwall.xnb

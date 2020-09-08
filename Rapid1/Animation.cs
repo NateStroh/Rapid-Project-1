@@ -6,6 +6,7 @@ using System.Xml;
 public class Animation
 {
 	public Texture2D texture;
+	public float scale;
 	public int currFrame;
 	public int numFrames;
 	public int frameHeight;
@@ -17,6 +18,7 @@ public class Animation
 	public Animation(Texture2D tex, int numOfFrames, float speed)
 	{
 		texture = tex;
+		scale = 1f;
 		currFrame = 0;
 		numFrames = numOfFrames;
 		frameHeight = tex.Height;

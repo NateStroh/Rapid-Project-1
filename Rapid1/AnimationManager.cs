@@ -42,6 +42,6 @@ public class AnimationManager
 	}
 
 	public void Draw(SpriteBatch spriteBatch){
-		spriteBatch.Draw(a.texture, animationPosition, new Rectangle(a.frameWidth * a.currFrame, 0, a.frameWidth, a.frameHeight), a.color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+		spriteBatch.Draw(a.texture, animationPosition, new Rectangle(a.frameWidth * a.currFrame, 0, a.frameWidth, a.frameHeight), a.color, 0f, Vector2.Zero, a.scale, SpriteEffects.None, 0f);
 	}
 }

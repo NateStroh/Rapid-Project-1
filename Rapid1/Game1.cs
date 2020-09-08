@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Rapid1.Sprites;
+using System;
 using System.Collections.Generic;
 
 namespace Rapid1
@@ -17,6 +18,8 @@ namespace Rapid1
         public static int screenHeight;
 
         private List<Sprite> sprites;
+        private List<Texture2D> backgroundBuildings;
+        private List<Vector2> backgroundBuildingsPos;
         private Player player;
         private Texture2D background;
         private Vector2 backgroundPos;
@@ -63,7 +66,7 @@ namespace Rapid1
                 },
 
                 new Player(new Dictionary<string, Animation>() {
-                    {"RedFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_r_sheet_2000_500"), 4, .2f)},
+                    {"RedFalling", new Animation(Content.Load<Texture2D>("player/texture_cha_air_r_sheet_2000_500"), 4, .2f) },
                     {"RedUp", new Animation(Content.Load<Texture2D>("player/texture_cha_jump_r_sheet_1500_1000"), 6, .2f)},
                     {"RedWalkRight", new Animation(Content.Load<Texture2D>("player/texture_cha_walk_r_sheet_2000_500"), 4, .2f)},
                     //{"RedLeft", new Animation(Content.Load<Texture2D>(""), 4, .2f)},
@@ -86,12 +89,14 @@ namespace Rapid1
 
                     }, new Vector2(100, -1000))
                 {
-                    scale = .7f
+                    //scale = .7f
                 },
 
-                new Enemy(Content.Load<Texture2D>("house/texture_bg_ruin_building_002"))
+                new Enemy(Content.Load<Texture2D>("mountain/deathwall"))
                 {
-                    Position = new Vector2(-4000,-2000),
+                    Position = new Vector2(-8000,-2500),
+                    
+                    //Rotation = MathHelper.Pi/2,
                     enemyType = 0,
                     scale = 5f
                 },
@@ -129,7 +134,8 @@ namespace Rapid1
                 new Paddle(Content.Load<Texture2D>("platform/Platform-Yellow2"))
                 {
                     Position = new Vector2(14500,1200),
-                    paddleType = 2
+                    paddleType = 2,
+                    scale = 2
                 },
 
                 new Paddle(Content.Load<Texture2D>("platform/Platform-Yellow1"))
@@ -240,14 +246,14 @@ namespace Rapid1
                 }
             }
 
-            if (player.getHealth() == 0 || player.Position.Y > 3000){
+            if (player.getHealth() == 0 || player.Position.Y > 2500){
                 foreach (var sprite in sprites){
                     sprite.isActive = true;
                     if(sprite.GetType() == typeof(Enemy))
                     {
                         if (((Enemy)sprite).enemyType == 0)
                         {
-                            sprite.Position = new Vector2(-4000, -2000);
+                            sprite.Position = new Vector2(-8000, -2500);
                         }
                     }
                 }
@@ -256,6 +262,7 @@ namespace Rapid1
             }
 
             backgroundPos = backgroundPos + (player.Velocity * .7f);
+            
 
             base.Update(gameTime);
         }
